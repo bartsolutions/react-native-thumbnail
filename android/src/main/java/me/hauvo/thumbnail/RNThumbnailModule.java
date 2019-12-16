@@ -69,6 +69,7 @@ public class RNThumbnailModule extends ReactContextBaseJavaModule {
       WritableMap map = Arguments.createMap();
 
       map.putString("path", "file://" + fullPath + '/' + fileName);
+      map.putDouble("origPath", filePath);
       map.putDouble("width", image.getWidth());
       map.putDouble("height", image.getHeight());
 

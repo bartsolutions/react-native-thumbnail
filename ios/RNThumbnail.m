@@ -41,6 +41,7 @@ RCT_EXPORT_METHOD(get:(NSString *)filepath resolve:(RCTPromiseResolveBlock)resol
         CGImageRelease(imgRef);
         if (resolve)
             resolve(@{ @"path" : fullPath,
+                       @"origPath": filepath,
                        @"width" : [NSNumber numberWithFloat: thumbnail.size.width],
                        @"height" : [NSNumber numberWithFloat: thumbnail.size.height] });
     } @catch(NSException *e) {
